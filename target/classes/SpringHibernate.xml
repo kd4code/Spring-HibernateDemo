@@ -20,8 +20,7 @@
 		<property name="password" value="3294" />
 	</bean>
 
-	<bean id="hibernate3AnnotatedSessionFactory"
-		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+	<bean id="sf" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
@@ -37,7 +36,5 @@
 			</props>
 		</property>
 	</bean>
-	<bean id="VendorDAO" class="DAO.ShopDAOImpl">
-		<property name="sf" ref="hibernate3AnnotatedSessionFactory" />
-	</bean>
+
 </beans>

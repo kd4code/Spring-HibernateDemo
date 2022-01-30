@@ -16,7 +16,7 @@ public class SpringHibernateDriver {
 		ApplicationContext cxt=new ClassPathXmlApplicationContext("SpringHibernate.xml"); 
 	    
 	    ShopControllerImpl sc=cxt.getBean(ShopControllerImpl.class);
-	    System.out.println("Please Enter the Option.\n1.Add\n2.Remove\n3.Update\n4.Get");
+	    System.out.println("\nPlease Enter an Option.\n1.Add\n2.Remove\n3.Update\n4.Get");
 	    Scanner s=new Scanner(System.in);
 	    int op=s.nextInt();
 	    if(op==1)

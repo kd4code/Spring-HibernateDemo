@@ -9,7 +9,9 @@ import org.springframework.stereotype.Repository;
 
 import Model.Vendor;
 
+@Repository
 public class ShopDAOImpl  {
+  @Autowired	
   private SessionFactory sf;
   
   public ShopDAOImpl() {
