@@ -3,21 +3,22 @@ package Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import DAO.ShopDAO;
 import DAO.ShopDAOImpl;
 import Model.Vendor;
 
 @Service
-public class ShopServiceImpl {
+public class ShopServiceImpl implements ShopService{
 	@Autowired
-	private ShopDAOImpl sd;
+	private ShopDAO sd;
 	
 	public ShopServiceImpl() {
 		super();
 	}
-	public ShopDAOImpl getSd() {
+	public ShopDAO getSd() {
 		return sd;
 	}
-	public void setSd(ShopDAOImpl sd) {
+	public void setSd(ShopDAO sd) {
 		this.sd = sd;
 	}
 	

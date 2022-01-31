@@ -4,23 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import Model.Vendor;
-import Service.ShopServiceImpl;
+import Service.ShopService;
 
 @Controller
 public class ShopControllerImpl {
     @Autowired
-	private ShopServiceImpl ss;
+	private ShopService ss;
 	
 	
 	public ShopControllerImpl() {
 		super();
 	}
 	
-	public ShopServiceImpl getSs() {
+	public ShopService getSs() {
 		return ss;
 	}
 
-	public void setSs(ShopServiceImpl ss) {
+	public void setSs(ShopService ss) {
 		this.ss = ss;
 	}
 

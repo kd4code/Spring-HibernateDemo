@@ -3,17 +3,18 @@ package Main;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 import Controller.ShopControllerImpl;
 import Model.Vendor;
-import jdk.internal.misc.FileSystemOption;
 
 public class SpringHibernateDriver {
 
 	public static void main(String[] args) {
 		System.out.println("Container Opened..\n");
-		ApplicationContext cxt=new ClassPathXmlApplicationContext("SpringHibernate.xml"); 
+	    ApplicationContext cxt=new ClassPathXmlApplicationContext("SpringHibernate.xml"); 
 	    
 	    ShopControllerImpl sc=cxt.getBean(ShopControllerImpl.class);
 	    System.out.println("\nPlease Enter an Option.\n1.Add\n2.Remove\n3.Update\n4.Get");
